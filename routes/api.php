@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\ColaboradorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//empresa
+
+Route::get('/empresas', [EmpresaController::class, 'index']);
+Route::get('/empresa/{id}', [EmpresaController::class, 'show']);
+Route::post('/nova-empresa', [EmpresaController::class, 'store']);
+
+Route::get('/colaboradores', [ColaboradorController::class, 'index']);
+Route::get('/colaborador/{id}', [ColaboradorController::class, 'show']);
+Route::post('/novo-colaborador', [ColaboradorController::class, 'store']); 
