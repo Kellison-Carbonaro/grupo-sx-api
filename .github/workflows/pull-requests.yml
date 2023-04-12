@@ -9,4 +9,4 @@ permissions:
 
 jobs:
   uneditable:
-    uses: laravel/.github/.github/workflows/pull-requests.yml@main
+    uses: git@github.com:Kellison-Carbonaro/grupo-sx-api.git
